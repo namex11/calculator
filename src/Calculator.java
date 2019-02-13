@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Calculator {
+public class Calculator {
     private List<Double> numbers;
 
     public Calculator() {
