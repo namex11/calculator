@@ -15,4 +15,8 @@ public abstract class Calculator {
     public boolean notZero(double number){
         return number != 0;
     }
+
+    public List<Double> getNumbers() {
+        return numbers;
+    }
 }
