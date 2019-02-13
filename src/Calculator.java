@@ -19,4 +19,8 @@ public class Calculator {
     public List<Double> getNumbers() {
         return numbers;
     }
+
+    public void resetList(){
+        this.numbers.clear();
+    }
 }
