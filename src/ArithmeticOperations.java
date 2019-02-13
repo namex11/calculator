@@ -43,4 +43,8 @@ public class ArithmeticOperations {
         }
         return answer;
     }
+
+    public double remainder(double first, double second){
+        return first%second;
+    }
 }
