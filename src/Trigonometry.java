@@ -7,14 +7,20 @@ public class Trigonometry {
     }
 
     public double sin(){
-        return Math.sin(calculator.getNumbers().indexOf(0));
+        double answer = Math.sin(calculator.getNumbers().indexOf(0));
+        calculator.resetList();
+        return answer;
     }
 
     public double cos(){
-        return Math.cos(calculator.getNumbers().indexOf(0));
+        double answer = Math.cos(calculator.getNumbers().indexOf(0));
+        calculator.resetList();
+        return answer;
     }
 
     public double tg(){
-        return Math.tan(calculator.getNumbers().indexOf(0));
+        double answer = Math.tan(calculator.getNumbers().indexOf(0));
+        calculator.resetList();
+        return answer;
     }
 }

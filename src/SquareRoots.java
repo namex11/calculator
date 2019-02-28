@@ -8,11 +8,13 @@ public class SquareRoots {
 
     public double squareRoot(){
         double num = calculator.getNumbers().indexOf(0);
+        calculator.resetList();
         return Math.sqrt(num);
     }
 
     public double squareNumber(int multiplier){
         double num = calculator.getNumbers().indexOf(0);
+        calculator.resetList();
         return Math.pow(num, multiplier);
     }
 }

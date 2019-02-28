@@ -1,6 +1,6 @@
 public class Percent {
 
-    private Calculator calculator;
+    public Calculator calculator;
 
     public Percent() {
         this.calculator = new Calculator();
