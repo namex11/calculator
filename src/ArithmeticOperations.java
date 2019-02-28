@@ -1,50 +1,48 @@
-public class ArithmeticOperations {
-
-    public Calculator calculator;
-
-    public ArithmeticOperations() {
-        this.calculator = new Calculator();
-    }
+public class ArithmeticOperations extends Calculator {
 
     public double addNumbers(){
         double answer = 0;
+        addNumbersToList();
         for (Double number :
-                calculator.getNumbers()) {
+                getNumbers()) {
             answer += number;
         }
-        calculator.resetList();
+        resetList();
         return answer;
     }
 
     public double subtractNumbers(){
         double answer = 0;
+        addNumbersToList();
         for (Double number:
-            calculator.getNumbers()){
+            getNumbers()){
             answer -= number;
         }
-        calculator.resetList();
+        resetList();
         return answer;
     }
 
     public double multiplyNumbers(){
         double answer = 1;
+        addNumbersToList();
         for (Double number :
-                calculator.getNumbers()) {
+                getNumbers()) {
             answer *=number;
         }
-        calculator.resetList();
+        resetList();
         return answer;
     }
 
     public double divideNumbers(){
         double answer = 0;
+        addNumbersToList();
         for (Double number :
-                calculator.getNumbers()) {
-            if (calculator.notZero(number)){
+                getNumbers()) {
+            if (notZero(number)){
                 answer /= number;
             }else System.out.println("One of the numbers is 0, so the division is not possible.");
         }
-        calculator.resetList();
+        resetList();
         return answer;
     }
 

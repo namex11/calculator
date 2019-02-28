@@ -1,12 +1,17 @@
-public class Percent {
+public class Percent extends Calculator {
 
-    public Calculator calculator;
-
-    public Percent() {
-        this.calculator = new Calculator();
+    public double percent(){
+        addNumbersToList();
+        double obtained = getNumbers().get(0);
+        double total = getNumbers().get(1);
+        double answer = obtained * 100 / total;
+        resetList();
+        return answer;
     }
 
-    public double percent(double obtained, double total){
-        return obtained * 100 / total;
+    @Override
+    public void addNumbersToList() {
+        System.out.println("Please enter two numbers for percentage operation, first - obtained, second - total.");
+        super.addNumbersToList();
     }
 }

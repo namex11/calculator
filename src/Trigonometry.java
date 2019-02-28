@@ -1,26 +1,29 @@
-public class Trigonometry {
-
-    private Calculator calculator;
-
-    public Trigonometry() {
-        this.calculator = new Calculator();
-    }
+public class Trigonometry extends Calculator {
 
     public double sin(){
-        double answer = Math.sin(calculator.getNumbers().indexOf(0));
-        calculator.resetList();
+        addNumbersToList();
+        double answer = Math.sin(getNumbers().indexOf(0));
+        resetList();
         return answer;
     }
 
     public double cos(){
-        double answer = Math.cos(calculator.getNumbers().indexOf(0));
-        calculator.resetList();
+        addNumbersToList();
+        double answer = Math.cos(getNumbers().indexOf(0));
+        resetList();
         return answer;
     }
 
     public double tg(){
-        double answer = Math.tan(calculator.getNumbers().indexOf(0));
-        calculator.resetList();
+        addNumbersToList();
+        double answer = Math.tan(getNumbers().indexOf(0));
+        resetList();
         return answer;
+    }
+
+    @Override
+    public void addNumbersToList() {
+        System.out.println("Please input one number");
+        super.addNumbersToList();
     }
 }

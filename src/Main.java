@@ -36,11 +36,14 @@ public class Main {
                 switch (choice){
                     case 1:
                         ArithmeticOperations operations = new ArithmeticOperations();
-                        System.out.println("Please enter numbers for addition and any letter if you wish to calculate those numbers:");
-
+                        System.out.println("Please enter numbers for addition or 0 to perform calculation");
+                        double number;
+                        while (number != 0){
+                            number = scan.nextDouble();
+                        }
                 }
             } catch (InputMismatchException e){
-                System.out.println("Please enter only integer or double values.");
+                System.out.println("Error, please enter only integer or double values.");
             }
 
         }

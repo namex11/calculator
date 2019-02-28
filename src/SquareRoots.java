@@ -1,20 +1,29 @@
-public class SquareRoots {
-
-    private Calculator calculator;
-
-    public SquareRoots() {
-        this.calculator = new Calculator();
-    }
+public class SquareRoots  extends Calculator{
 
     public double squareRoot(){
-        double num = calculator.getNumbers().indexOf(0);
-        calculator.resetList();
+        addNumbersToList();
+        double num = getNumbers().indexOf(0);
+        resetList();
         return Math.sqrt(num);
     }
 
-    public double squareNumber(int multiplier){
-        double num = calculator.getNumbers().indexOf(0);
-        calculator.resetList();
+    public double squareNumber(){
+        addNumbersToList();
+        double num = getNumbers().indexOf(0);
+        double multiplier =getNumbers().indexOf(1);
+        resetList();
         return Math.pow(num, multiplier);
+    }
+
+    @Override
+    public void addNumbersToList() {
+        System.out.println("Please input number or \n" +
+                "number and multiplier");
+        try {
+            super.addNumbersToList();
+        } catch (IndexOutOfBoundsException e){
+            System.out.println("Ooops, you didnt entered enough numbers for a specific calculation :(");
+        }
+
     }
 }

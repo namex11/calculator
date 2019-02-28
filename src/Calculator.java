@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
-public class Calculator {
+public abstract class Calculator {
     private List<Double> numbers;
 
     public Calculator() {
@@ -22,5 +23,15 @@ public class Calculator {
 
     public void resetList(){
         this.numbers.clear();
+    }
+
+    public void addNumbersToList(){
+        Scanner scan = new Scanner(System.in);
+        double number;
+        while (scan.hasNext()){
+            number = scan.nextDouble();
+            numbers.add(number);
+        }
+        System.out.println(numbers);
     }
 }
