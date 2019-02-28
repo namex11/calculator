@@ -2,15 +2,18 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-
-    }
 
     public static Scanner scan = new Scanner(System.in);
     public static ArithmeticOperations arithmeticOperations = new ArithmeticOperations();
     public static Percent percent = new Percent();
     public static SquareRoots squareRoots = new SquareRoots();
     public static Trigonometry trigonometry = new Trigonometry();
+
+    public static void main(String[] args) {
+        menu();
+        scan.close();
+    }
+
 
     public static void printmenu(){
         System.out.println("\t \t \tCALCULATOR");
@@ -35,15 +38,15 @@ public class Main {
 
         while (exit){
             printmenu();
-
+            int choice;
             try {
-                int choice = scan.nextInt();
+                choice = scan.nextInt();
                 switch (choice){
                     case 1:
                         roundNumber(arithmeticOperations.addNumbers());
                         break;
                     case 2:
-                        roundNumber(arithmeticOperations.divideNumbers());
+                        roundNumber(arithmeticOperations.subtractNumbers());
                         break;
                     case 3:
                         roundNumber(arithmeticOperations.multiplyNumbers());
@@ -87,6 +90,11 @@ public class Main {
     }
 
     private static void roundNumber(double number){
+        System.out.print("Your answer is: ");
         System.out.format("%.4f", number);
+        System.out.println();
+        System.out.println();
+
     }
+
 }

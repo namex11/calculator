@@ -12,10 +12,11 @@ public class ArithmeticOperations extends Calculator {
     }
 
     public double subtractNumbers(){
-        double answer = 0;
         addNumbersToList();
+        double answer = getNumbers().get(0);
+
         for (Double number:
-            getNumbers()){
+            getNumbers().subList(1, getNumbers().size())){
             answer -= number;
         }
         resetList();
@@ -34,10 +35,11 @@ public class ArithmeticOperations extends Calculator {
     }
 
     public double divideNumbers(){
-        double answer = 0;
         addNumbersToList();
+        double answer = getNumbers().get(0);
+
         for (Double number :
-                getNumbers()) {
+                getNumbers().subList(1, getNumbers().size())) {
             if (notZero(number)){
                 answer /= number;
             }else System.out.println("One of the numbers is 0, so the division is not possible.");

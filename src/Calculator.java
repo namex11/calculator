@@ -26,13 +26,15 @@ public abstract class Calculator {
     }
 
     public void addNumbersToList(){
+        System.out.println("Enter your numbers and press 0 to start calculation.");
         Scanner scan = new Scanner(System.in);
         double number;
-        while (scan.hasNext()){
+        while (true){
             number = scan.nextDouble();
-            numbers.add(number);
+            if (number == 0){
+                break;
+            } else numbers.add(number);
         }
         System.out.println(numbers);
-        scan.close();
     }
 }
