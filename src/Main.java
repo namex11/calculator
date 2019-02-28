@@ -7,6 +7,10 @@ public class Main {
     }
 
     public static Scanner scan = new Scanner(System.in);
+    public static ArithmeticOperations arithmeticOperations = new ArithmeticOperations();
+    public static Percent percent = new Percent();
+    public static SquareRoots squareRoots = new SquareRoots();
+    public static Trigonometry trigonometry = new Trigonometry();
 
     public static void printmenu(){
         System.out.println("\t \t \tCALCULATOR");
@@ -35,7 +39,7 @@ public class Main {
             try {
                 switch (choice){
                     case 1:
-                        ArithmeticOperations operations = new ArithmeticOperations();
+
                         System.out.println("Please enter numbers for addition or 0 to perform calculation");
                         double number;
                         while (number != 0){

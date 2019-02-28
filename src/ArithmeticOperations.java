@@ -46,7 +46,13 @@ public class ArithmeticOperations extends Calculator {
         return answer;
     }
 
-    public double remainder(double first, double second){
-        return first % second;
+    public double remainder(){
+        System.out.println("Please input two numbers to get remainder");
+        addNumbersToList();
+        double first = getNumbers().get(0);
+        double second = getNumbers().get(1);
+        double result = first % second;
+        resetList();
+        return result;
     }
 }
