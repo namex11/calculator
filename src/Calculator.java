@@ -33,5 +33,6 @@ public abstract class Calculator {
             numbers.add(number);
         }
         System.out.println(numbers);
+        scan.close();
     }
 }

@@ -26,30 +26,67 @@ public class Main {
                 "8. Square number \n" +
                 "9. Sin \n" +
                 "10. Cos \n" +
-                "11. Tg");
+                "11. Tg \n" +
+                "12. Exit the application");
     }
 
     public static void menu(){
-        boolean exit = false;
+        boolean exit = true;
 
         while (exit){
             printmenu();
 
-            int choice = scan.nextInt();
             try {
+                int choice = scan.nextInt();
                 switch (choice){
                     case 1:
-
-                        System.out.println("Please enter numbers for addition or 0 to perform calculation");
-                        double number;
-                        while (number != 0){
-                            number = scan.nextDouble();
-                        }
+                        roundNumber(arithmeticOperations.addNumbers());
+                        break;
+                    case 2:
+                        roundNumber(arithmeticOperations.divideNumbers());
+                        break;
+                    case 3:
+                        roundNumber(arithmeticOperations.multiplyNumbers());
+                        break;
+                    case 4:
+                        roundNumber(arithmeticOperations.divideNumbers());
+                        break;
+                    case 5:
+                        roundNumber(arithmeticOperations.remainder());
+                        break;
+                    case 6:
+                        roundNumber(percent.percent());
+                        break;
+                    case 7:
+                        roundNumber(squareRoots.squareRoot());
+                        break;
+                    case 8:
+                        roundNumber(squareRoots.squareNumber());
+                        break;
+                    case 9:
+                        roundNumber(trigonometry.sin());
+                        break;
+                    case 10:
+                        roundNumber(trigonometry.cos());
+                        break;
+                    case 11:
+                        roundNumber(trigonometry.tg());
+                        break;
+                    case 12:
+                        exit = false;
+                        break;
+                    default:
+                        System.out.println("Theres no such option number in the menu.");
+                        break;
                 }
             } catch (InputMismatchException e){
                 System.out.println("Error, please enter only integer or double values.");
             }
 
         }
+    }
+
+    private static void roundNumber(double number){
+        System.out.format("%.4f", number);
     }
 }
